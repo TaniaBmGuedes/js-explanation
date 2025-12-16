@@ -6,4 +6,6 @@ export type Example = {
   description?: string;
   code: string;
   output: unknown;
+  // Optional runner to produce dynamic output at render time.
+  run?: () => unknown;
 };

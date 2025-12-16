@@ -7,6 +7,12 @@ interface ContentProps {
 
 export function Content({ example }: ContentProps) {
   const [showOutput, setShowOutput] = useState(false);
+  const [renderedOutput, setRenderedOutput] = useState<unknown>(null);
+  const handleShow = () => {
+    const value = example?.run ? example.run() : example?.output;
+    setRenderedOutput(value);
+    setShowOutput(true);
+  };
 
   if (!example) {
     return (
@@ -42,25 +48,29 @@ export function Content({ example }: ContentProps) {
         <div className="section-title">
           <span className="eyebrow">Output</span>
           {!showOutput ? (
-            <button
-              type="button"
-              className="reveal-button"
-              onClick={() => setShowOutput(true)}
-            >
+            <button type="button" className="reveal-button" onClick={handleShow}>
               Show output
             </button>
-          ) : null}
+          ) : (
+            <button
+              type="button"
+              className="reveal-button secondary"
+              onClick={() => setShowOutput(false)}
+            >
+              Hide output
+            </button>
+          )}
         </div>
 
         {showOutput ? (
           <pre className="code-block muted">
-            {JSON.stringify(example.output, null, 2)}
+            {JSON.stringify(renderedOutput, null, 2)}
           </pre>
         ) : (
           <button
             type="button"
             className="reveal-panel"
-            onClick={() => setShowOutput(true)}
+            onClick={handleShow}
           >
             <p className="eyebrow">Click to reveal the result</p>
             <p>Run the code virtually to see the output.</p>

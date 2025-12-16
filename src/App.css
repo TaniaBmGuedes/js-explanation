@@ -153,6 +153,17 @@
   border-color: rgba(34, 211, 238, 0.7);
 }
 
+.reveal-button.secondary {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #cbd5e1;
+}
+
+.reveal-button.secondary:hover {
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: none;
+}
+
 .reveal-panel {
   width: 100%;
   text-align: left;
