@@ -81,6 +81,7 @@ console.log(list3);
         consoleLog(list1);
         consoleLog(list2);
         consoleLog(list3);
+        
       } catch (error) {
         logs.push(`Error: ${String(error)}`);
       }
