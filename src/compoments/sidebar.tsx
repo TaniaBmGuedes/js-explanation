@@ -7,7 +7,13 @@ interface SidebarProps {
 const items: Array<{ key: MenuType; label: string; detail: string }> = [
   { key: "arrays", label: "Arrays", detail: "Destructuring assignment" },
   { key: "arraysFilters", label: "Arrays", detail: "Filters" },
-    { key: "arraysMap", label: "Arrays", detail: "Map" },
+  { key: "arraysMap", label: "Arrays", detail: "Map" },
+  { key: "arraysReduce", label: "Arrays", detail: "Reduce" },
+  {
+    key: "arraysFilterMapReduce",
+    label: "Arrays",
+    detail: "Filter, Map, Reduce",
+  },
   { key: "objects", label: "Objects", detail: "Destructuring assignment" },
   { key: "functions", label: "Functions", detail: "Declarations" },
 ];

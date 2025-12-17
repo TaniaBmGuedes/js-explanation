@@ -9,6 +9,8 @@ import { exempleObjects } from "./compoments/examples/objects";
 import { exampleFunctions } from "./compoments/examples/functions";
 import { exempleArraysFilters } from "./compoments/examples/arrays-filter";
 import { exempleArraysMap } from "./compoments/examples/arrays-map";
+import { exempleArraysReduce } from './compoments/examples/array-reduce';
+import { exempleArraysFilterMapReduce } from './compoments/examples/array-filter-map-reduce';
 function App() {
   const [example, setExample] = useState<Example | null>(null);
 
@@ -23,6 +25,14 @@ function App() {
     }
     if (topic === "arraysMap") {
       setExample(exempleArraysMap());
+      return;
+    }
+    if (topic === "arraysReduce") {
+      setExample(exempleArraysReduce());
+      return;
+    }
+    if (topic === "arraysFilterMapReduce") {
+      setExample(exempleArraysFilterMapReduce());
       return;
     }
     if (topic === "objects") {

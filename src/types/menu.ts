@@ -2,6 +2,8 @@ export type MenuType =
   | "arrays"
   | "arraysFilters"
   | "arraysMap"
+  | "arraysReduce"
+  | "arraysFilterMapReduce"
   | "objects"
   | "functions";
 
