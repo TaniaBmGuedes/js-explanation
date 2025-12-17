@@ -1,4 +1,9 @@
-export type MenuType = "arrays" | "objects"|"functions";
+export type MenuType =
+  | "arrays"
+  | "arraysFilters"
+  | "arraysMap"
+  | "objects"
+  | "functions";
 
 export type CodeSnippet = {
   title?: string;

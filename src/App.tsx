@@ -6,13 +6,23 @@ import { Content } from "./compoments/content";
 import { exempleArrays } from "./compoments/examples/arrays";
 import type { Example, MenuType } from "./types/menu";
 import { exempleObjects } from "./compoments/examples/objects";
-import { exampleFunctions } from './compoments/examples/functions';
+import { exampleFunctions } from "./compoments/examples/functions";
+import { exempleArraysFilters } from "./compoments/examples/arrays-filter";
+import { exempleArraysMap } from "./compoments/examples/arrays-map";
 function App() {
   const [example, setExample] = useState<Example | null>(null);
 
   function loadExample(topic: MenuType) {
     if (topic === "arrays") {
       setExample(exempleArrays());
+      return;
+    }
+    if (topic === "arraysFilters") {
+      setExample(exempleArraysFilters());
+      return;
+    }
+    if (topic === "arraysMap") {
+      setExample(exempleArraysMap());
       return;
     }
     if (topic === "objects") {
