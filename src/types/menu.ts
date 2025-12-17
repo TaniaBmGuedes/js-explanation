@@ -8,7 +8,8 @@ export type MenuType =
   | "functions"
   | "forEach"
   | "classes"
-  |"staticMethods";
+  | "staticMethods"
+  | "promises";
 
 export type CodeSnippet = {
   title?: string;

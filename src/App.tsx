@@ -13,7 +13,9 @@ import { exempleArraysReduce } from "./compoments/examples/array-reduce";
 import { exempleArraysFilterMapReduce } from "./compoments/examples/array-filter-map-reduce";
 import { exampleforEach } from "./compoments/examples/forEach";
 import { exampleClasses } from "./compoments/examples/classes";
-import exampleStatiMethods from './compoments/examples/static-methods';
+import { exampleStatiMethods } from './compoments/examples/static-methods';
+import { examplesPromises } from './compoments/examples/promises';
+
 function App() {
   const [example, setExample] = useState<Example | null>(null);
 
@@ -57,6 +59,10 @@ function App() {
     }
     if (topic === "staticMethods") {
       setExample(exampleStatiMethods());
+      return;
+    }
+     if (topic === "promises") {
+      setExample(examplesPromises());
       return;
     }
 

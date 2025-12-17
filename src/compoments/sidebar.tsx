@@ -23,6 +23,11 @@ const items: Array<{ key: MenuType; label: string; detail: string }> = [
     label: "Static Methods",
     detail: "How static Methods works ",
   },
+   {
+    key: "promises",
+    label: "Promises",
+    detail: "How promises works ",
+  },
 ];
 
 export function Sidebar({ onSelect }: SidebarProps) {
