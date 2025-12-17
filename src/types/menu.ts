@@ -5,7 +5,9 @@ export type MenuType =
   | "arraysReduce"
   | "arraysFilterMapReduce"
   | "objects"
-  | "functions";
+  | "functions"
+  | "forEach"
+  | "classes";
 
 export type CodeSnippet = {
   title?: string;

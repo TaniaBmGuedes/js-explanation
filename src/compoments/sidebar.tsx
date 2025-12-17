@@ -16,6 +16,8 @@ const items: Array<{ key: MenuType; label: string; detail: string }> = [
   },
   { key: "objects", label: "Objects", detail: "Destructuring assignment" },
   { key: "functions", label: "Functions", detail: "Declarations" },
+  { key: "forEach", label: "Foreach", detail: "What forEach does " },
+  { key: "classes", label: "Classes", detail: "What classes does " },
 ];
 
 export function Sidebar({ onSelect }: SidebarProps) {

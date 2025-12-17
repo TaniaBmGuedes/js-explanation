@@ -9,8 +9,10 @@ import { exempleObjects } from "./compoments/examples/objects";
 import { exampleFunctions } from "./compoments/examples/functions";
 import { exempleArraysFilters } from "./compoments/examples/arrays-filter";
 import { exempleArraysMap } from "./compoments/examples/arrays-map";
-import { exempleArraysReduce } from './compoments/examples/array-reduce';
-import { exempleArraysFilterMapReduce } from './compoments/examples/array-filter-map-reduce';
+import { exempleArraysReduce } from "./compoments/examples/array-reduce";
+import { exempleArraysFilterMapReduce } from "./compoments/examples/array-filter-map-reduce";
+import { exampleforEach } from "./compoments/examples/forEach";
+import { exampleClasses } from './compoments/examples/classes';
 function App() {
   const [example, setExample] = useState<Example | null>(null);
 
@@ -42,6 +44,14 @@ function App() {
 
     if (topic === "functions") {
       setExample(exampleFunctions());
+      return;
+    }
+    if (topic === "forEach") {
+      setExample(exampleforEach());
+      return;
+    }
+     if (topic === "classes") {
+      setExample(exampleClasses());
       return;
     }
 
