@@ -1,11 +1,15 @@
-export type MenuType = "arrays" | "objects";
+export type MenuType = "arrays" | "objects"|"functions";
+
+export type CodeSnippet = {
+  title?: string;
+  code: string;
+};
 
 export type Example = {
   title: string;
   subtitle?: string;
   description?: string;
-  code: string;
+  code: string | CodeSnippet[];
   output: unknown;
-  // Optional runner to produce dynamic output at render time.
   run?: () => unknown;
 };

@@ -1,4 +1,4 @@
-export function exemploArrays() {
+export function exempleArrays() {
   const codeSnippet = `
 const a = "A";
 const b = "B";

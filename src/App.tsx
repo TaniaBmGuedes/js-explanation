@@ -1,20 +1,30 @@
 import { useState } from "react";
 
 import "./App.css";
-import { Sidebar } from './compoments/sidebar';
-import { Content } from './compoments/content';
-import { exemploArrays } from './compoments/examples/arrays';
-import type { Example, MenuType } from './types/menu';
+import { Sidebar } from "./compoments/sidebar";
+import { Content } from "./compoments/content";
+import { exempleArrays } from "./compoments/examples/arrays";
+import type { Example, MenuType } from "./types/menu";
+import { exempleObjects } from "./compoments/examples/objects";
+import { exampleFunctions } from './compoments/examples/functions';
 function App() {
   const [example, setExample] = useState<Example | null>(null);
 
   function loadExample(topic: MenuType) {
     if (topic === "arrays") {
-      setExample(exemploArrays());
+      setExample(exempleArrays());
+      return;
+    }
+    if (topic === "objects") {
+      setExample(exempleObjects());
       return;
     }
 
-    // Fallback clears the current example for unsupported topics.
+    if (topic === "functions") {
+      setExample(exampleFunctions());
+      return;
+    }
+
     setExample(null);
   }
 

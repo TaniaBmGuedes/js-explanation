@@ -5,7 +5,9 @@ interface SidebarProps {
 }
 
 const items: Array<{ key: MenuType; label: string; detail: string }> = [
-  { key: "arrays", label: "Arrays", detail: "destructuring" },
+  { key: "arrays", label: "Arrays", detail: "Destructuring assignment" },
+  { key: "objects", label: "Objects", detail: "Destructuring assignment" },
+  { key: "functions", label: "Functions", detail: "Destructuring assignment" },
 ];
 
 export function Sidebar({ onSelect }: SidebarProps) {

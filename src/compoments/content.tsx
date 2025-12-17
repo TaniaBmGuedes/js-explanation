@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Example } from "../types/menu";
+import type { Example, CodeSnippet } from "../types/menu";
 
 interface ContentProps {
   example: Example | null;
@@ -41,7 +41,19 @@ export function Content({ example }: ContentProps) {
         <div className="section-title">
           <span className="eyebrow">Code</span>
         </div>
-        <pre className="code-block">{example.code}</pre>
+
+        {Array.isArray(example.code) ? (
+          <div className="code-stack">
+            {example.code.map((snippet: CodeSnippet, index: number) => (
+              <div key={snippet.title ?? index} className="code-snippet">
+                {snippet.title ? <p className="eyebrow">{snippet.title}</p> : null}
+                <pre className="code-block">{snippet.code}</pre>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <pre className="code-block">{example.code}</pre>
+        )}
       </section>
 
       <section className="content-card">
