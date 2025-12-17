@@ -13,8 +13,11 @@ import { exempleArraysReduce } from "./compoments/examples/array-reduce";
 import { exempleArraysFilterMapReduce } from "./compoments/examples/array-filter-map-reduce";
 import { exampleforEach } from "./compoments/examples/forEach";
 import { exampleClasses } from "./compoments/examples/classes";
-import { exampleStatiMethods } from './compoments/examples/static-methods';
-import { examplesPromises } from './compoments/examples/promises';
+import { exampleStatiMethods } from "./compoments/examples/static-methods";
+import { examplesPromises } from "./compoments/examples/promises";
+import { examplesAsyncWait } from "./compoments/examples/async-and-wait";
+import { examplesFecthApi } from "./compoments/examples/fecthAPI";
+import { examplesFecthApiAxios } from "./compoments/examples/fecth-axios";
 
 function App() {
   const [example, setExample] = useState<Example | null>(null);
@@ -61,8 +64,20 @@ function App() {
       setExample(exampleStatiMethods());
       return;
     }
-     if (topic === "promises") {
+    if (topic === "promises") {
       setExample(examplesPromises());
+      return;
+    }
+    if (topic === "asyncAndWait") {
+      setExample(examplesAsyncWait());
+      return;
+    }
+    if (topic === "fetchAPI") {
+      setExample(examplesFecthApi());
+      return;
+    }
+    if (topic === "fetchAPIAndAxios") {
+      setExample(examplesFecthApiAxios());
       return;
     }
 

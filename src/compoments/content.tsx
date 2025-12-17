@@ -8,10 +8,19 @@ interface ContentProps {
 export function Content({ example }: ContentProps) {
   const [showOutput, setShowOutput] = useState(false);
   const [renderedOutput, setRenderedOutput] = useState<unknown>(null);
-  const handleShow = () => {
-    const value = example?.run ? example.run() : example?.output;
-    setRenderedOutput(value);
+  const handleShow = async () => {
+    if (!example) return;
+
     setShowOutput(true);
+    const result = example.run ? example.run() : example.output;
+
+    if (result instanceof Promise) {
+      const resolved = await result;
+      setRenderedOutput(resolved);
+      return;
+    }
+
+    setRenderedOutput(result);
   };
 
   if (!example) {

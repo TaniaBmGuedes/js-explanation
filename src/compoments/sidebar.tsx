@@ -23,10 +23,27 @@ const items: Array<{ key: MenuType; label: string; detail: string }> = [
     label: "Static Methods",
     detail: "How static Methods works ",
   },
-   {
+  {
     key: "promises",
     label: "Promises",
     detail: "How promises works ",
+  },
+  {
+    key: "asyncAndWait",
+    label: "Async And Wait",
+    detail: "How Async And Wait works ",
+  },
+
+  {
+    key: "fetchAPI",
+    label: "Fetch API",
+    detail: "How fetch API works ",
+  },
+
+  {
+    key: "fetchAPIAndAxios",
+    label: "Fetch API And Axios",
+    detail: "How fetch API And Axios works ",
   },
 ];
 

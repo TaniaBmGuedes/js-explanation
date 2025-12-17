@@ -9,7 +9,10 @@ export type MenuType =
   | "forEach"
   | "classes"
   | "staticMethods"
-  | "promises";
+  | "promises"
+  | "asyncAndWait"
+  | "fetchAPI"
+  | "fetchAPIAndAxios";
 
 export type CodeSnippet = {
   title?: string;
@@ -22,5 +25,5 @@ export type Example = {
   description?: string;
   code: string | CodeSnippet[];
   output: unknown;
-  run?: () => unknown;
+  run?: () => unknown | Promise<unknown>;
 };
